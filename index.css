@@ -45,7 +45,7 @@ a {
     margin-left: 165%;
     margin-bottom: 20px;
     padding: 5px;
-/*     display: block; */
+    display: block;
 
 }
 
@@ -180,9 +180,8 @@ a {
     margin-left: 20px;
     margin-top: 60px;
 }
-body {
+/*body {
     min-width: 1200px;
-
 }
 
 
@@ -199,7 +198,7 @@ body {
         overflow-x: hidden; 
     }
 }
-/* @media screen and (max-width: 768px) {
+ @media screen and (max-width: 768px) {
 
     .one {
         flex-direction: column;
@@ -262,3 +261,51 @@ body {
         padding: 15px;
     }
 } */
+
+/* General adjustments for larger screens */
+body {
+    min-width: 1200px; /* Keeps desktop layout intact */
+}
+
+/* Prevent flex elements from wrapping on larger screens */
+.one, .main {
+    flex-wrap: nowrap;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+    body {
+        min-width: 100%;  /* Ensure content fills the screen */
+        overflow-x: hidden;  /* Prevent horizontal scrolling */
+    }
+
+    .one, .main {
+        flex-direction: column;  /* Stack elements vertically */
+        align-items: center;  /* Center-align content */
+    }
+
+    .left, .right {
+        width: 90%;  /* Use 90% of the screen width */
+        margin: 10px 0;  /* Add vertical spacing */
+    }
+
+    .card {
+        width: 90%;  /* Adjust card size to fit mobile screens */
+        margin: 10px auto;  /* Center cards */
+    }
+
+    .search1 {
+        width: 100%;  /* Full width for the search bar */
+        margin-left: 0;  /* Remove large margin */
+    }
+
+    ul#two {
+        flex-direction: column;  /* Stack navigation links vertically */
+        align-items: center;  /* Center-align links */
+    }
+
+    a {
+        font-size: 24px;  /* Adjust link size for readability */
+        padding: 10px;  /* Reduce padding */
+    }
+}
