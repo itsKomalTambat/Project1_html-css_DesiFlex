@@ -197,6 +197,7 @@ body {
         transform: scale(0.8);  
         transform-origin: top left;
         width: 100%;
+        hieght:100%;
         overflow-x: hidden; 
     }
 }
