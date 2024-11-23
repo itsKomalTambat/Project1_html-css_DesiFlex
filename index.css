@@ -180,7 +180,25 @@ a {
     margin-left: 20px;
     margin-top: 60px;
 }
-@media screen and (max-width: 768px) {
+body {
+    min-width: 1200px;
+}
+
+
+.one, .main {
+    flex-wrap: nowrap;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        transform: scale(0.8);  
+        transform-origin: top left;
+        width: 125%;
+        overflow-x: hidden; 
+    }
+}
+/* @media screen and (max-width: 768px) {
 
     .one {
         flex-direction: column;
@@ -242,4 +260,4 @@ a {
         width: 100%;
         padding: 15px;
     }
-}
+} */
