@@ -9,6 +9,7 @@
     align-content: space-between;
     background-color: rgb(77, 42, 109);
     height: 100px;
+    width: 100%;
     border: 2px solid rgb(61, 34, 86);
 
 }
